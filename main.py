@@ -21,4 +21,7 @@ import fonction as f
 lst1 = [1,2,3,4,5,6,7,8,9,10]
 lst2 = [2,2,3,40,50,6,70,8,9,10]
 
-f.elementsCommuns(lst1, lst2)
+#f.elementsCommuns(lst1, lst2)
+
+# Exercice 8
+f.palyndrome()

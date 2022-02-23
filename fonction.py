@@ -3,10 +3,12 @@ from math import *
 # 1. Créer une fonction qui demande à l'utilisateur son nom et prénom et affiche un message dans la console.
 
 def infoUser():
-    nom = input('Entre ton nom ?')
-    prenom = input('Entre ton prenom ?')
-    print(nom,prenom)
-
+    try:
+        nom = input('Entre ton nom ?')
+        prenom = input('Entre ton prenom ?')
+        print(nom, prenom)
+    except ValueError:
+        print('Erreur')
 
 #2. Créer une fonction qui demande à l'utilisateur son age et affiche l'année ou il aura 100 ans.
 def infoAge():
@@ -61,9 +63,14 @@ def elementsCommuns(liste1, liste2):
         for item in liste2:
             if element == item:
                 listeCommuns.append(element)
-    
-    
+    listeCommuns = set(listeCommuns)
     print(listeCommuns)
 
 
 #8. Ecrire une fonction qui determine si une chaine de caractère est un palyndrome
+def palyndrome():
+    chaine = input()
+    if str(chaine) == str(chaine)[::-1] :
+        print(chaine, " est un palindrome")
+    else:
+        print(chaine, " n' est pas un palindrome")
